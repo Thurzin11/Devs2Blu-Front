@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="phrase">Informe uma frase</label>
+        <input type="text" id="phrase">
+        <button onclick="renderPhrase()">Salvar</button>
+    </div>
+    <div id="result"></div>
+    <script>
+        let phrase = document.getElementById('phrase');
+        let result = document.getElementById('result');
+        function renderPhrase() {
+            result.innerHTML += `<p>${phrase.value}</p>`;
+        }
+    </script>
+</body>
+
+</html>
