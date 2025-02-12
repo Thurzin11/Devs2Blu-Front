@@ -11,7 +11,7 @@ function ReadContact() {
         const response = await axios.get("http://localhost:3000/contatos");
         setContacts(response.data);
       } catch (error) {
-        console.error("Erro ao buscar contatos:", error);
+        console.error("Erro ao buscar todos:", error);
       }
     };
     fetchContacts();
