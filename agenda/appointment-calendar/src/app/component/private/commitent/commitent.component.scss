@@ -1,0 +1,105 @@
+/* Container principal */
+.container {
+  margin: 20px;
+  padding: 20px;
+}
+
+/* Spinner centralizado */
+.spinner {
+  margin: 20px auto;
+  display: block;
+}
+
+/* Mensagem de erro */
+.error-container {
+  margin: 10px 0;
+
+  .error-card {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+    mat-icon {
+      margin-right: 5px;
+    }
+  }
+}
+
+/* Área de ações: botão de cadastro e barra de pesquisa */
+.actions-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  .register-button {
+    min-width: 200px;
+    height: 55px;
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    flex: 1;
+    min-width: 250px;
+    margin-left: 10px;
+  }
+}
+
+/* Lista de compromissos */
+.commitments-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cartão de compromisso */
+.commitment-card {
+  margin: 10px 0;
+  padding: 10px;
+
+  mat-card-header {
+    margin-bottom: 10px;
+  }
+
+  mat-chip {
+    margin-right: 5px;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+
+    button {
+      margin-left: 5px;
+    }
+  }
+}
+
+/* Mensagem quando não há compromissos */
+.no-items {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+  color: #757575;
+}
+
+.commitment-card {
+  margin: 1rem 0;
+
+  mat-chip {
+    margin: 0.3rem;
+
+    mat-icon {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+}

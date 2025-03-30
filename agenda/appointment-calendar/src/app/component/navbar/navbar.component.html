@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" class="navbar">
+  <button mat-icon-button (click)="toggleSidenav()" class="menu-button">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <a mat-button class="logo" routerLink="/commitent">Agenda</a>
+
+  <span class="spacer"></span>
+
+  <nav class="nav-links">
+    <a mat-button routerLink="/commitent" routerLinkActive="active">Compromissos</a>
+    <a mat-button routerLink="/contact" routerLinkActive="active">Contatos</a>
+    <a mat-button *ngIf="isAdmin" routerLink="/location" routerLinkActive="active">Locais</a>
+    <a mat-button routerLink="/" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </a>
+  </nav>
+</mat-toolbar>

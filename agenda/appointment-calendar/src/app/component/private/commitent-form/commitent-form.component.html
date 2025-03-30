@@ -1,0 +1,36 @@
+<mat-card class="form-container">
+  <mat-card-header>
+    <mat-card-title>{{ isEditMode ? 'Editar' : 'Cadastrar' }} Compromisso</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Título</mat-label>
+        <input matInput [(ngModel)]="commitment.title" name="title" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput [(ngModel)]="commitment.description" name="description" required></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Data</mat-label>
+        <input matInput [(ngModel)]="commitment.date" name="date" [matDatepicker]="picker" required />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Hora</mat-label>
+        <input matInput [(ngModel)]="commitment.time" name="time" required />
+      </mat-form-field>
+
+      <div class="actions">
+        <button mat-raised-button color="primary" type="submit">{{ isEditMode ? 'Atualizar' : 'Cadastrar' }}</button>
+        <button mat-raised-button color="warn" routerLink="/commitent" type="button">Cancelar</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

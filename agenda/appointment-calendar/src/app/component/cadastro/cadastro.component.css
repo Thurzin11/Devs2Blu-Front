@@ -1,0 +1,132 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 1rem;
+}
+.auth-container .auth-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+.auth-container .auth-card .auth-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.auth-container .auth-card .auth-header .logo-container {
+  background: #3f51b5;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+.auth-container .auth-card .auth-header .logo-container .logo-icon {
+  color: white;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+.auth-container .auth-card .auth-header .auth-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #3f51b5;
+}
+.auth-container .auth-card .auth-header .auth-subtitle {
+  color: #666;
+  font-size: 0.9rem;
+}
+.auth-container .auth-card .form-fields {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.auth-container .auth-card .form-fields mat-form-field .prefix-container .field-icon {
+  color: #666;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+.auth-container .auth-card .form-fields mat-form-field .mat-form-field-outline {
+  color: rgba(0, 0, 0, 0.12);
+}
+.auth-container .auth-card .form-fields mat-form-field.mat-focused .mat-form-field-outline {
+  color: #3f51b5;
+}
+.auth-container .auth-card .auth-button {
+  height: 48px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: #3f51b5;
+  color: white;
+  transition: all 0.3s ease;
+}
+.auth-container .auth-card .auth-button:hover {
+  background: #283593;
+  transform: translateY(-1px);
+}
+.auth-container .auth-card .auth-button:disabled {
+  background: #9fa8da;
+}
+.auth-container .auth-card .auth-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.auth-container .auth-card .auth-actions .auth-link-text {
+  color: #666;
+  font-size: 0.9rem;
+}
+.auth-container .auth-card .auth-actions .auth-link-button {
+  color: #3f51b5;
+}
+.auth-container .auth-card .auth-actions .auth-link-button mat-icon {
+  font-size: 18px;
+  margin-right: 0.5rem;
+}
+.auth-container .password-toggle {
+  margin-right: -4px;
+}
+.auth-container .mat-error {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.auth-container .mat-error mat-icon {
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+@media (max-width: 600px) {
+  .auth-container {
+    padding: 0.5rem;
+  }
+  .auth-container .auth-card {
+    padding: 1.5rem;
+  }
+  .auth-container .auth-card .auth-header .logo-container {
+    width: 50px;
+    height: 50px;
+  }
+  .auth-container .auth-card .auth-header .logo-container .logo-icon {
+    font-size: 28px;
+  }
+  .auth-container .auth-card .auth-header .auth-title {
+    font-size: 1.3rem;
+  }
+  .auth-container .auth-card .auth-button {
+    height: 44px;
+    font-size: 0.95rem;
+  }
+}/*# sourceMappingURL=cadastro.component.css.map */

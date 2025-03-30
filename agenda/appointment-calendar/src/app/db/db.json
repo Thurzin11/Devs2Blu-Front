@@ -1,0 +1,52 @@
+{
+  "commitents": [
+    {
+      "id": "60e3a833-1c96-4c34-a420-c51dec5ba529",
+      "title": "titulo admin",
+      "description": "desc certa",
+      "date": "2025-04-10T03:00:00.000Z",
+      "time": "09:00",
+      "contactId": 0,
+      "localId": 0,
+      "userId": "67e0a27e65847e309f4d8435"
+    },
+    {
+      "id": "60e3a833-1c96-4c34-a420-c51dec5ba529",
+      "title": "titulo user",
+      "description": "desc certa",
+      "date": "2025-04-10T03:00:00.000Z",
+      "time": "09:00",
+      "contactId": 0,
+      "localId": 0,
+      "userId": "67e9b6ede7b5d26c242a21a1"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "1",
+      "name": "John Smith User ",
+      "phone": "+1 (555) 123-4567",
+      "email": "john.smith@techcorp.com",
+      "userId": "67e9b6ede7b5d26c242a21a1"
+    },
+    {
+      "id": "2",
+      "name": "Maria García Admin",
+      "phone": "+34 912 345 678",
+      "email": "mgarcia@innovatech.es",
+      "userId": "67e0a27e65847e309f4d8435"
+    }
+  ],
+  "locations": [
+    {
+      "id": "1",
+      "name": "Main Conference Room",
+      "address": "TechPark Building, 123 Innovation Street, Silicon Valley, CA"
+    },
+    {
+      "id": "2",
+      "name": "Client Hub",
+      "address": "456 Business Avenue, Madrid, Spain"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <div class="login-header">
+      <div class="logo-container">
+        <mat-icon class="logo-icon">security</mat-icon>
+      </div>
+      <mat-card-title class="login-title">Bem-vindo de volta!</mat-card-title>
+      <mat-card-subtitle class="login-subtitle">Faça login para continuar</mat-card-subtitle>
+    </div>
+
+    <mat-divider class="divider-spaced"></mat-divider>
+
+    <mat-card-content>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-fields">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>E-mail</mat-label>
+            <input
+              #emailInput
+              matInput
+              type="email"
+              formControlName="email"
+              placeholder="exemplo@email.com"
+              [class.invalid]="email?.invalid && email?.touched"
+            >
+            <mat-error *ngIf="email?.hasError('required')">
+              Campo obrigatório
+            </mat-error>
+            <mat-error *ngIf="email?.hasError('email')">
+              Formato inválido
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Senha</mat-label>
+            <input
+              matInput
+              [type]="hidePassword ? 'password' : 'text'"
+              formControlName="password"
+              [class.invalid]="password?.invalid && password?.touched"
+            >
+            <button
+              mat-icon-button
+              matSuffix
+              type="button"
+              (click)="togglePasswordVisibility()"
+              class="password-toggle"
+            >
+              <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+            <mat-error *ngIf="password?.hasError('required')">
+              Campo obrigatório
+            </mat-error>
+            <mat-error *ngIf="password?.hasError('minlength')">
+              Mínimo 6 caracteres
+            </mat-error>
+            <mat-error *ngIf="(email?.hasError('invalidCredentials') && loginForm.touched)">
+              Credenciais inválidas, verifique seu e-mail e senha
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <button
+          mat-raised-button
+          color="primary"
+          class="full-width login-button"
+          type="submit"
+          [disabled]="loginForm.invalid || loading"
+        >
+          <span *ngIf="!loading" class="button-label">Entrar</span>
+          <mat-spinner *ngIf="loading" [diameter]="24" class="button-spinner"></mat-spinner>
+        </button>
+      </form>
+    </mat-card-content>
+    <mat-card-actions class="card-actions">
+      <button mat-button routerLink="/recuperar-senha" class="secondary-link">
+        <mat-icon>help_outline</mat-icon>
+        Esqueceu a senha?
+      </button>
+      <div class="separator">|</div>
+      <button mat-stroked-button color="accent" routerLink="/register" class="secondary-button">
+        <mat-icon>person_add</mat-icon>
+        Criar conta
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
