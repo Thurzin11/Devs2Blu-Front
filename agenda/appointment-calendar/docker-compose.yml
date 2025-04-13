@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  angular:
+    build: .
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - json-server
+    networks:
+      - app-network
+
+  json-server:
+    image: node:alpine
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src/app/db:/data
+    working_dir: /data
+    command: sh -c "npm install -g json-server && json-server --watch db.json --host 0.0.0.0"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

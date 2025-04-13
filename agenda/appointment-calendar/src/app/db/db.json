@@ -28,13 +28,6 @@
       "phone": "+1 (555) 123-4567",
       "email": "john.smith@techcorp.com",
       "userId": "67e9b6ede7b5d26c242a21a1"
-    },
-    {
-      "id": "2",
-      "name": "Maria García Admin",
-      "phone": "+34 912 345 678",
-      "email": "mgarcia@innovatech.es",
-      "userId": "67e0a27e65847e309f4d8435"
     }
   ],
   "locations": [
